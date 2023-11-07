@@ -1,4 +1,4 @@
-This has a set of scripts which does the following.
+This repository has set of scripts which does the migration of volume and compute across tenancies.
 
 The scripts for old tenancy do the following.
 
