@@ -9,7 +9,7 @@ This document explains how the different tasks in the migration process can be s
 •	 Migrate the VMs across multiple customer tenancies.
 
 In this case, the VMs are moved across 2 different tenancies as shown in the Architecture.
-![Alt text](https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/fileview/D925874BC19A4CEABA18A5194462ED4162D0F381CB15/_cross_tenancy_migration.png)
+![Alt text](https://github.com/Lucifer970901/cross-tenancy-migration-of-compute-and-volume-in-OCI-using-python/blob/main/cross_tenancy_migration.png)
  
 
 Prerequisites:
