@@ -7,6 +7,7 @@ import csv
 import time
 import os.path
 
+#provide the configuration details for the new tenancy.
 config = oci.config.from_file(file_location="~/.oci/config_sehubjapaciaasset02")
 backup_id_lst = []
 backup_name_lst = []
