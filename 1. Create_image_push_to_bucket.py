@@ -7,7 +7,8 @@ import time
 import os.path
 import concurrent.futures
 
-config = oci.config.from_file(file_location="~/.oci/config_sehubjapaciaasset01") # refering to the config for the authentication.
+# refering to the configuration of old tenancy for the authentication.
+config = oci.config.from_file(file_location="~/.oci/config_sehubjapaciaasset01") 
 image_lst = []
 backup_lst = []
 compute_client = oci.core.ComputeClient(config)
