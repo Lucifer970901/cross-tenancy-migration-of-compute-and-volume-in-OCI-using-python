@@ -7,6 +7,7 @@ import time
 import os.path
 import concurrent.futures
 
+#provide the configuration details for the old tenancy.
 config = oci.config.from_file(file_location="~/.oci/config_sehubjapaciaasset01")
 par_url_lst =[]
 
