@@ -38,15 +38,19 @@ Process:
 Once the instance is running, you can SSH into the instance and install the required python packages like pandas. You can import the script from the above repository. Make sure you have OCI-CLI configured prior you test the script in the instance. The python script covers the creation of the custom images and backups in the old tenancy as well as moving the custom images and volumes to the newer tenancy. These  two scripts that needs to be executed for two different tenancies. You can find the script in my GitHub.
 
 
-Here is the script to list create the block volume backup and  Save the backup IDs to a file.
-
+Here it shows the detailed workflow followed by each of the scripts.
+ The script 1 (create_image_push_to_bucket.py)
 •	For each instance present in the compartment, create a custom image, and save the generated custom image OCID for later use.
 •	Check if the object storage bucket exists, if not create a bucket and a Pre Authenticated Request for the bucket to export the custom image created.
-•	Export the custom image to the bucket and create PAR to the objects created. And store it in file
+•	Export the custom image to the bucket and create PAR to the objects created. And store it in file.
+•	Create the backup for the each of the block volumes present in the compartment.
+The script 2 (create_object_PAR.py) 
+creates the PAR URL for each of the object created from the previous step.
 
-The script 2 (for new tenancy) does the following.
+The script 3 (import_image_backup.py).
 •	In the new tenancy you will be running this script, first it will read the file and for the PAR created for each object, and import the image from the PAR access URI. And create the custom image.
 •	Create the block volumes in the new tenancy from the backup created  in the old tenancy.
+![image](https://github.com/Lucifer970901/cross-tenancy-migration-of-compute-and-volume-in-OCI-using-python/assets/26675416/59dd116b-70a9-4ef6-88b9-f2682a8422df)
 
 Summary
 I used these set of scripts to migrate the large volume of data and compute across multiple tenancies. It’s a great way to ease the complexities involved in migration with python.
