@@ -28,14 +28,14 @@ Endorse group NewTenancyIdentityGroup to read volume-backups in tenancy OldTenan
 Endorse group NewTenancyIdentityGroup to inspect volumes in tenancy OldTenancy
 
 Make sure to grant the permissions that are required for cross-migration activities and  delete the policies once the activity is completed.
-for more information on policies used here: please review this document 
+for more information on policies check the Oracle blog on the volume data migration process across tenancies. 
 
 Recommended Hardware:
 For the deployment of the Python code, you might have to create the instances in both tenancies. In this case, we are using Oracle Linux 8 operating system and with VM standard E4.Flex shape with 1 OCPU and 6GB memory. The script may require you to install pip3, pandas, and OCI-CLI for the code to work.
 if you want to execute the script from the local machine, make sure all the Python packages and OCI-CLI are configured for 2 different tenancies.
 
 Process:
-Once the instance is running, you can SSH into the instance and install the required Python packages like pandas. You can import the script from the above repository. Make sure you have OCI-CLI configured prior you testing the script in the instance. The Python script covers the creation of the custom images and backups in the old tenancy as well as moving the custom images and volumes to the newer tenancy. These  two scripts need to be executed for two different tenancies. You can find the script on this GitHub page.
+Once the instance is running, you can SSH into the instance and install the required Python packages like pandas. You can import the script from this repository. Make sure you have OCI-CLI configured prior you testing the script in the instance. The Python script covers the creation of the custom images and backups in the old tenancy as well as moving the custom images and volumes to the newer tenancy. These  two scripts need to be executed for two different tenancies.
 
 
 Here it shows the detailed workflow followed by each of the scripts.
